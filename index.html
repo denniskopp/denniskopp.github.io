@@ -1,186 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kopp Translations</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopp Translations</title>
 
-<style>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body, html{
-margin:0;
-padding:0;
-font-family:Arial, sans-serif;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* NAVBAR */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #111111;
+    }
 
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.35);
-color:white;
-z-index:10;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-.logo{
-font-size:22px;
-font-weight:bold;
-letter-spacing:1px;
-}
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e9ecef;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
 
-.nav-links{
-display:flex;
-align-items:center;
-gap:30px;
-}
+    .header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 32px;
+    }
 
-.nav-links a{
-color:white;
-text-decoration:none;
-font-size:16px;
-}
+    .brand {
+      font-size: 22px;
+      font-weight: 600;
+      color: #111111;
+      white-space: nowrap;
+    }
 
-.nav-links a:hover{
-opacity:0.7;
-}
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 34px;
+    }
 
-/* QUOTE BUTTON */
+    .main-nav a {
+      font-size: 15px;
+      color: #1a1a1a;
+      transition: opacity 0.2s ease;
+    }
 
-.quote-btn{
-background:white;
-color:black;
-padding:10px 18px;
-border-radius:4px;
-font-weight:bold;
-}
+    .main-nav a:hover {
+      opacity: 0.65;
+    }
 
-/* HERO VIDEO */
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      white-space: nowrap;
+    }
 
-.hero{
-height:100vh;
-position:relative;
-overflow:hidden;
-}
+    .languages {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #1a1a1a;
+    }
 
-.hero video{
-position:absolute;
-top:50%;
-left:50%;
-min-width:100%;
-min-height:100%;
-transform:translate(-50%,-50%);
-object-fit:cover;
-}
+    .languages a:hover {
+      opacity: 0.65;
+    }
 
-/* SECTIONS */
+    .quote-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: #0f2747;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
 
-.section{
-padding:120px 20%;
-}
+    .quote-btn:hover {
+      background: #16355f;
+      transform: translateY(-1px);
+    }
 
-.section h2{
-font-size:32px;
-margin-bottom:20px;
-}
+    /* HERO */
+    .hero-wrap {
+      max-width: 1240px;
+      margin: 36px auto 0;
+      padding: 0 32px;
+    }
 
-.section p{
-font-size:18px;
-line-height:1.6;
-}
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 76vh;
+      min-height: 540px;
+      max-height: 760px;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #000000;
+    }
 
-</style>
+    .hero video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* CONTENT */
+    .content {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 72px 32px 100px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 64px;
+      align-items: start;
+      margin-bottom: 88px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #506070;
+      margin-bottom: 18px;
+    }
+
+    .intro h1 {
+      margin: 0;
+      font-size: 48px;
+      line-height: 1.08;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #111111;
+    }
+
+    .intro-text p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.75;
+      color: #4a4f57;
+    }
+
+    .section {
+      padding-top: 32px;
+      margin-bottom: 88px;
+    }
+
+    .section h2 {
+      margin: 0 0 20px;
+      font-size: 32px;
+      font-weight: 600;
+      color: #111111;
+      letter-spacing: -0.02em;
+    }
+
+    .section p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.75;
+      color: #4a4f57;
+      max-width: 860px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .service-card {
+      background: #f8fafc;
+      border: 1px solid #e9edf2;
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 12px;
+      font-size: 21px;
+      color: #111111;
+    }
+
+    .service-card p {
+      font-size: 16px;
+      line-height: 1.65;
+      color: #59606a;
+    }
+
+    .faq-box,
+    .contact-box {
+      background: #f8fafc;
+      border: 1px solid #e9edf2;
+      border-radius: 22px;
+      padding: 30px;
+      margin-top: 26px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: #0f2747;
+      font-weight: 600;
+    }
+
+    /* MOBILE */
+    @media (max-width: 1100px) {
+      .header-inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .main-nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 18px 26px;
+      }
+
+      .header-right {
+        justify-content: flex-start;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .header-inner,
+      .hero-wrap,
+      .content {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .main-nav a {
+        font-size: 14px;
+      }
+
+      .header-right {
+        gap: 22px;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        height: 58vh;
+        min-height: 380px;
+        border-radius: 22px;
+      }
+
+      .intro h1 {
+        font-size: 36px;
+      }
+
+      .section h2 {
+        font-size: 28px;
+      }
+
+      .intro-text p,
+      .section p {
+        font-size: 17px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="brand">Kopp Translations</a>
 
-<div class="navbar">
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-<div class="logo">
-Kopp Translations
-</div>
+      <div class="header-right">
+        <div class="languages">
+          <a href="#">EN</a>
+          <span>|</span>
+          <a href="#">DE</a>
+          <span>|</span>
+          <a href="#">FR</a>
+        </div>
 
-<div class="nav-links">
+        <a href="#contact" class="quote-btn">Get a Quote</a>
+      </div>
+    </div>
+  </header>
 
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
+  <div class="hero-wrap" id="home">
+    <section class="hero">
+      <video autoplay muted loop playsinline preload="auto">
+        <source src="language-without-borders-hero.mp4" type="video/mp4" />
+      </video>
+    </section>
+  </div>
 
-<a href="#contact" class="quote-btn">
-GET A QUOTE
-</a>
+  <main class="content">
+    <section class="intro" id="about">
+      <div>
+        <div class="eyebrow">About</div>
+        <h1>Professional translation into German from English and French.</h1>
+      </div>
 
-</div>
+      <div class="intro-text">
+        <p>
+          Kopp Translations offers clear, natural and reliable German translation for clients who need strong language,
+          cultural accuracy and a professional final result. The focus is on communication that reads naturally in German
+          and supports your message with precision.
+        </p>
+      </div>
+    </section>
 
-</div>
+    <section class="section" id="services">
+      <h2>Services</h2>
+      <p>
+        Translation services tailored to business communication, digital content and texts that need to sound natural,
+        professional and trustworthy in German.
+      </p>
 
-<!-- HERO VIDEO -->
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>English to German</h3>
+          <p>
+            Professional translation from English into German for websites, business texts and client-facing content.
+          </p>
+        </div>
 
-<section class="hero">
+        <div class="service-card">
+          <h3>French to German</h3>
+          <p>
+            Context-sensitive translation from French into German with a focus on clarity, fluency and accuracy.
+          </p>
+        </div>
 
-<video autoplay muted loop playsinline>
-<source src="language-without-borders-hero.mp4" type="video/mp4">
-</video>
+        <div class="service-card">
+          <h3>Marketing & Web Content</h3>
+          <p>
+            Natural German wording for websites, online presence and content that needs a strong and credible voice.
+          </p>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section class="section" id="faq">
+      <h2>FAQ</h2>
+      <div class="faq-box">
+        <p>
+          Questions about pricing, turnaround times and project scope can be discussed individually depending on the text,
+          deadline and complexity of your request.
+        </p>
+      </div>
+    </section>
 
-<!-- ABOUT -->
-
-<section id="about" class="section">
-
-<h2>About</h2>
-
-<p>
-Professional translator specialising in English and French into German translation.
-</p>
-
-</section>
-
-<!-- SERVICES -->
-
-<section id="services" class="section">
-
-<h2>Services</h2>
-
-<p>
-Translation services for business, marketing and web content.
-</p>
-
-</section>
-
-<!-- FAQ -->
-
-<section id="faq" class="section">
-
-<h2>FAQ</h2>
-
-<p>
-Information about services, pricing and turnaround time.
-</p>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact" class="section">
-
-<h2>Contact</h2>
-
-<p>
-Email: contact@kopp-translations.com
-</p>
-
-</section>
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <p>
+          Get in touch for availability, project details and quotes.
+        </p>
+        <a class="contact-link" href="mailto:contact@kopp-translations.com">contact@kopp-translations.com</a>
+      </div>
+    </section>
+  </main>
 
 </body>
 </html>
