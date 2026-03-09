@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kopp Translations</title>
+
+<style>
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.overlay h1 {
+  font-size: 48px;
+  letter-spacing: 3px;
+}
+
+.overlay p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<video autoplay muted loop playsinline>
+  <source src="hero.mp4" type="video/mp4">
+</video>
+
+<div class="overlay">
+<h1>LANGUAGE WITHOUT BORDERS</h1>
+<p>Professional Translation into German<br>from English and French</p>
+</div>
+
+</section>
+
+</body>
+</html>
