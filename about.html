@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Kopp Translations</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #111111;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e9ecef;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 600;
+      color: #111111;
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 34px;
+    }
+
+    .main-nav a {
+      font-size: 15px;
+      color: #1a1a1a;
+      transition: opacity 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      opacity: 0.65;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      white-space: nowrap;
+    }
+
+    .languages {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #1a1a1a;
+    }
+
+    .quote-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: #0f2747;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .quote-btn:hover {
+      background: #16355f;
+      transform: translateY(-1px);
+    }
+
+    .page-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 48px 32px 100px;
+    }
+
+    .page-intro {
+      margin-bottom: 44px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #506070;
+      margin-bottom: 16px;
+    }
+
+    .page-intro h1 {
+      margin: 0;
+      font-size: 52px;
+      line-height: 1.06;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #111111;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 56px;
+      align-items: start;
+      margin-bottom: 72px;
+    }
+
+    .about-photo {
+      background: #f8fafc;
+      border: 1px solid #e9edf2;
+      border-radius: 24px;
+      padding: 18px;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .about-text p {
+      margin: 0 0 22px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #4a4f57;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .info-card {
+      background: #f8fafc;
+      border: 1px solid #e9edf2;
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .info-card h3 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      color: #111111;
+    }
+
+    .info-card p,
+    .info-card li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #59606a;
+    }
+
+    .info-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #e5e5e5;
+      margin-top: 80px;
+    }
+
+    footer a {
+      color: #555;
+    }
+
+    @media (max-width: 1100px) {
+      .header-inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .main-nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 18px 26px;
+      }
+
+      .header-right {
+        justify-content: flex-start;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .header-inner,
+      .page-wrap {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .main-nav a {
+        font-size: 14px;
+      }
+
+      .header-right {
+        gap: 22px;
+        flex-wrap: wrap;
+      }
+
+      .page-intro h1 {
+        font-size: 38px;
+      }
+
+      .about-text p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">Kopp Translations</a>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-right">
+        <div class="languages">
+          <a href="#">EN</a>
+          <span>|</span>
+          <a href="#">DE</a>
+          <span>|</span>
+          <a href="#">FR</a>
+        </div>
+
+        <a href="contact.html" class="quote-btn">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="page-intro">
+      <div class="eyebrow">About</div>
+      <h1>Hello, I'm Dennis.</h1>
+    </section>
+
+    <section class="about-grid">
+      <div class="about-photo">
+        <img src="dennis-kopp.jpg" alt="Dennis Kopp" />
+      </div>
+
+      <div class="about-text">
+        <p>
+          I’m a freelance translator based in Essen, Germany, specializing in translation from English and French into German.
+          My goal is to help businesses communicate clearly and naturally with German-speaking audiences through accurate and well-crafted translations.
+        </p>
+
+        <p>
+          My professional background combines language expertise with international business experience. I completed a three-year training program as a state-certified foreign language assistant, followed by a three-year apprenticeship in international trade management. During this time, I regularly communicated with English and French-speaking clients and developed a strong understanding of international business communication.
+        </p>
+
+        <p>
+          Languages and cultures have always fascinated me. I enjoy traveling, spending time in nature and discovering new perspectives through language. In my free time, I follow football and enjoy video games.
+        </p>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <div class="info-card">
+        <h3>Job Title</h3>
+        <p>Freelance Translator<br>English & French to German</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Languages</h3>
+        <ul>
+          <li>German – Native</li>
+          <li>English – Professional</li>
+          <li>French – Professional</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Education</h3>
+        <ul>
+          <li>State-Certified Foreign Language Assistant</li>
+          <li>Apprenticeship in International Trade Management</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Location</h3>
+        <p>Essen, Germany</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Copyright © 2026 | Dennis Kopp | All Rights Reserved
+    <br><br>
+    <a href="impressum.html">Imprint</a> | <a href="privacy.html">Privacy</a>
+  </footer>
+
+</body>
+</html>
