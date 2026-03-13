@@ -105,13 +105,13 @@
     }
 
     .page-wrap {
-      max-width: 1240px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 48px 32px 100px;
+      padding: 56px 32px 100px;
     }
 
-    .page-intro {
-      margin-bottom: 44px;
+    .hero-block {
+      margin-bottom: 70px;
     }
 
     .eyebrow {
@@ -123,55 +123,130 @@
       margin-bottom: 16px;
     }
 
-    .page-intro h1 {
-      margin: 0 0 14px;
+    .hero-block h1 {
+      margin: 0 0 18px;
       font-size: 52px;
-      line-height: 1.06;
+      line-height: 1.05;
       font-weight: 600;
       letter-spacing: -0.02em;
       color: #111111;
+      max-width: 760px;
     }
 
-    .intro-text {
+    .hero-block p {
+      margin: 0;
       max-width: 760px;
       font-size: 18px;
       line-height: 1.8;
       color: #4a4f57;
     }
 
-    h2 {
-      margin: 56px 0 18px;
+    .section {
+      margin-bottom: 70px;
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
       font-size: 32px;
       font-weight: 600;
-      color: #111111;
       letter-spacing: -0.02em;
+      color: #111111;
     }
 
-    .grid {
+    .section-intro {
+      max-width: 760px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #4a4f57;
+      margin-bottom: 28px;
+    }
+
+    .service-list {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 26px;
+      gap: 22px;
     }
 
-    .card {
+    .service-item {
       background: #f8fafc;
       border: 1px solid #e9edf2;
       border-radius: 22px;
       padding: 28px;
     }
 
-    .card h3 {
-      margin: 0 0 12px;
-      font-size: 21px;
+    .service-item h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
       color: #111111;
     }
 
-    .card p {
+    .service-item p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #59606a;
+      max-width: 860px;
+    }
+
+    .specialisation-grid,
+    .texttype-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .small-card {
+      background: #f8fafc;
+      border: 1px solid #e9edf2;
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .small-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #111111;
+    }
+
+    .small-card p {
       margin: 0;
       font-size: 16px;
       line-height: 1.7;
       color: #59606a;
+    }
+
+    .cta-box {
+      background: #0f2747;
+      color: #ffffff;
+      border-radius: 28px;
+      padding: 38px;
+      margin-top: 10px;
+    }
+
+    .cta-box h2 {
+      margin: 0 0 12px;
+      font-size: 34px;
+      color: #ffffff;
+    }
+
+    .cta-box p {
+      margin: 0 0 22px;
+      max-width: 700px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .cta-link {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #0f2747;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
     footer {
@@ -203,7 +278,8 @@
         justify-content: flex-start;
       }
 
-      .grid {
+      .specialisation-grid,
+      .texttype-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -228,12 +304,18 @@
         flex-wrap: wrap;
       }
 
-      .page-intro h1 {
+      .hero-block h1 {
         font-size: 38px;
       }
 
-      .intro-text {
+      .hero-block p,
+      .section-intro,
+      .cta-box p {
         font-size: 17px;
+      }
+
+      .cta-box h2 {
+        font-size: 28px;
       }
     }
   </style>
@@ -267,90 +349,139 @@
   </header>
 
   <main class="page-wrap">
-    <section class="page-intro">
+    <section class="hero-block">
       <div class="eyebrow">Services</div>
-      <h1>Language Services</h1>
-      <p class="intro-text">
-        Professional language services for businesses and international communication.
-        I help companies communicate clearly and effectively with German-speaking audiences.
+      <h1>My language services</h1>
+      <p>
+        Professional English and French to German language services for businesses, digital content and international communication.
+        I help clients communicate clearly, naturally and effectively with German-speaking audiences.
       </p>
     </section>
 
-    <section>
+    <section class="section">
       <h2>Services</h2>
+      <p class="section-intro">
+        I offer language services tailored to professional communication, online content and texts that need to sound natural, clear and reliable in German.
+      </p>
 
-      <div class="grid">
-        <div class="card">
+      <div class="service-list">
+        <div class="service-item">
           <h3>Translation</h3>
           <p>
-            Professional translation from English and French into German.
-            Clear, accurate translations adapted to the German market.
+            Professional translation from English and French into German. I provide accurate, natural and audience-oriented translations that preserve the meaning, tone and purpose of the original text.
           </p>
         </div>
 
-        <div class="card">
+        <div class="service-item">
           <h3>Proofreading & Editing</h3>
           <p>
-            Correction and improvement of German texts to ensure accuracy,
-            clarity and natural flow.
+            Revision and refinement of German texts to improve accuracy, clarity and style. This service is ideal for texts that need a final professional polish before publication.
           </p>
         </div>
 
-        <div class="card">
+        <div class="service-item">
           <h3>Subtitling</h3>
           <p>
-            Creation and translation of subtitles for videos and multimedia content.
+            Creation and translation of subtitles for videos and multimedia content. I help make audiovisual content accessible and easy to follow for German-speaking viewers.
           </p>
         </div>
 
-        <div class="card">
+        <div class="service-item">
           <h3>SEO Translation</h3>
           <p>
-            Website translations optimized for search engines and German audiences.
+            Website translations with search visibility in mind. I combine linguistic accuracy with SEO awareness to make your content more effective in the German market.
           </p>
         </div>
 
-        <div class="card">
+        <div class="service-item">
           <h3>Transcreation</h3>
           <p>
-            Creative adaptation of marketing content for the German market.
+            Creative adaptation of marketing content for German audiences. The focus is not only on translating words, but on preserving the intended message, tone and impact.
           </p>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="section">
       <h2>Specialisations</h2>
+      <p class="section-intro">
+        My language services are supported by a strong interest in business communication, technical content and digital media.
+      </p>
 
-      <div class="grid">
-        <div class="card">
+      <div class="specialisation-grid">
+        <div class="small-card">
           <h3>Technical</h3>
           <p>
-            Technical documentation and product information.
+            Technical documentation, product-related texts and content that requires precision and clarity.
           </p>
         </div>
 
-        <div class="card">
+        <div class="small-card">
           <h3>Business & International Trade</h3>
           <p>
-            Business communication, company documents and international trade.
+            Business communication, company documents and international trade-related content.
           </p>
         </div>
 
-        <div class="card">
+        <div class="small-card">
           <h3>Marketing</h3>
           <p>
-            Marketing content, websites and promotional material.
+            Marketing copy, promotional material and brand communication adapted to German readers.
           </p>
         </div>
 
-        <div class="card">
+        <div class="small-card">
           <h3>Gaming</h3>
           <p>
-            Localization of gaming content and digital media.
+            Localization and language support for gaming-related and digital entertainment content.
           </p>
         </div>
       </div>
+    </section>
+
+    <section class="section">
+      <h2>What can I help you with?</h2>
+      <p class="section-intro">
+        Depending on your project, I can support a wide range of text types and digital communication materials.
+      </p>
+
+      <div class="texttype-grid">
+        <div class="small-card">
+          <h3>Websites</h3>
+          <p>
+            Website copy, landing pages and business pages for German-speaking audiences.
+          </p>
+        </div>
+
+        <div class="small-card">
+          <h3>Product Descriptions</h3>
+          <p>
+            Clear and persuasive German descriptions for products and services.
+          </p>
+        </div>
+
+        <div class="small-card">
+          <h3>Business Communication</h3>
+          <p>
+            Emails, presentations, company profiles and other professional business texts.
+          </p>
+        </div>
+
+        <div class="small-card">
+          <h3>Video Subtitles</h3>
+          <p>
+            Subtitles for promotional videos, interviews, educational content and more.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-box">
+      <h2>Need a quote for your project?</h2>
+      <p>
+        If you are looking for reliable language services into German, feel free to get in touch. I’d be happy to discuss your project and availability.
+      </p>
+      <a href="index.html#contact" class="cta-link">Get in touch</a>
     </section>
   </main>
 
