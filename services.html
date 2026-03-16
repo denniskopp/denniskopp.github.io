@@ -107,108 +107,157 @@
     .page-wrap {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 56px 32px 100px;
+      padding: 0 32px 100px;
     }
 
-    .hero-block {
-      margin-bottom: 70px;
+    .services-hero {
+      background: #eef1ff;
+      margin-top: 34px;
+      padding: 72px 30px 60px;
+      text-align: center;
+      border-radius: 30px;
     }
 
-    .eyebrow {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #506070;
-      margin-bottom: 16px;
-    }
-
-    .hero-block h1 {
-      margin: 0 0 18px;
+    .services-hero h1 {
+      margin: 0 0 16px;
       font-size: 52px;
-      line-height: 1.05;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      color: #111111;
-      max-width: 760px;
-    }
-
-    .hero-block p {
-      margin: 0;
-      max-width: 760px;
-      font-size: 18px;
-      line-height: 1.8;
-      color: #4a4f57;
-    }
-
-    .section {
-      margin-bottom: 70px;
-    }
-
-    .section h2 {
-      margin: 0 0 14px;
-      font-size: 32px;
+      line-height: 1.08;
       font-weight: 600;
       letter-spacing: -0.02em;
       color: #111111;
     }
 
-    .section-intro {
+    .services-hero p {
+      margin: 0 auto;
       max-width: 760px;
-      font-size: 18px;
-      line-height: 1.8;
-      color: #4a4f57;
-      margin-bottom: 28px;
-    }
-
-    .service-list {
-      display: grid;
-      gap: 22px;
-    }
-
-    .service-item {
-      background: #f8fafc;
-      border: 1px solid #e9edf2;
-      border-radius: 22px;
-      padding: 28px;
-    }
-
-    .service-item h3 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      color: #111111;
-    }
-
-    .service-item p {
-      margin: 0;
-      font-size: 16px;
-      line-height: 1.75;
-      color: #59606a;
-      max-width: 860px;
-    }
-
-    .specialisation-grid,
-    .texttype-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 24px;
-    }
-
-    .small-card {
-      background: #f8fafc;
-      border: 1px solid #e9edf2;
-      border-radius: 22px;
-      padding: 24px;
-    }
-
-    .small-card h3 {
-      margin: 0 0 10px;
       font-size: 20px;
+      line-height: 1.7;
+      color: #444c56;
+    }
+
+    .language-pairs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      padding: 40px 0 24px;
+      text-align: center;
+    }
+
+    .pair {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #111111;
+      padding: 10px;
+    }
+
+    .service-section {
+      padding: 34px 0;
+    }
+
+    .service-two-col {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .service-text h2,
+    .single-service h2,
+    .specialisations h2,
+    .cta-box h2 {
+      margin: 0 0 18px;
+      font-size: 32px;
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: -0.02em;
       color: #111111;
     }
 
-    .small-card p {
+    .service-text p,
+    .single-service p,
+    .specialisations p,
+    .cta-box p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #4a4f57;
+    }
+
+    .service-image-box {
+      background: #f8fafc;
+      border: 1px solid #e9edf2;
+      border-radius: 24px;
+      padding: 20px;
+    }
+
+    .service-image-box img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px 42px;
+      padding-top: 12px;
+    }
+
+    .single-service {
+      min-height: 100%;
+    }
+
+    .divider-space {
+      height: 18px;
+    }
+
+    .specialisations-wrap {
+      background: #eef1ff;
+      border-radius: 30px;
+      padding: 50px 36px;
+      margin-top: 20px;
+    }
+
+    .specialisations {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px 40px;
+      align-items: start;
+    }
+
+    .specialisations-left h2 {
+      margin: 0 0 16px;
+      font-size: 32px;
+      color: #111111;
+    }
+
+    .specialisations-left p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #4a4f57;
+      max-width: 420px;
+    }
+
+    .specialisation-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .specialisation-item {
+      padding: 0 0 14px;
+      border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+    }
+
+    .specialisation-item h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #111111;
+    }
+
+    .specialisation-item p {
       margin: 0;
       font-size: 16px;
       line-height: 1.7;
@@ -216,37 +265,34 @@
     }
 
     .cta-box {
-      background: #0f2747;
-      color: #ffffff;
-      border-radius: 28px;
-      padding: 38px;
-      margin-top: 10px;
-    }
-
-    .cta-box h2 {
-      margin: 0 0 12px;
-      font-size: 34px;
-      color: #ffffff;
+      text-align: center;
+      padding: 70px 20px 20px;
     }
 
     .cta-box p {
-      margin: 0 0 22px;
-      max-width: 700px;
-      font-size: 18px;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.88);
+      max-width: 720px;
+      margin: 0 auto 24px;
     }
 
     .cta-link {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 13px 22px;
       border-radius: 999px;
       background: #ffffff;
+      border: 2px solid #0f2747;
       color: #0f2747;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
+      transition: all 0.2s ease;
+    }
+
+    .cta-link:hover {
+      background: #0f2747;
+      color: #ffffff;
     }
 
     footer {
@@ -255,7 +301,7 @@
       font-size: 14px;
       color: #555;
       border-top: 1px solid #e5e5e5;
-      margin-top: 80px;
+      margin-top: 50px;
     }
 
     footer a {
@@ -278,8 +324,13 @@
         justify-content: flex-start;
       }
 
-      .specialisation-grid,
-      .texttype-grid {
+      .language-pairs,
+      .two-col-grid,
+      .specialisations {
+        grid-template-columns: 1fr;
+      }
+
+      .service-two-col {
         grid-template-columns: 1fr;
       }
     }
@@ -304,18 +355,36 @@
         flex-wrap: wrap;
       }
 
-      .hero-block h1 {
+      .services-hero {
+        padding: 52px 20px 42px;
+        border-radius: 24px;
+      }
+
+      .services-hero h1 {
         font-size: 38px;
       }
 
-      .hero-block p,
-      .section-intro,
+      .services-hero p,
+      .service-text p,
+      .single-service p,
+      .specialisations-left p,
       .cta-box p {
         font-size: 17px;
       }
 
+      .pair {
+        font-size: 24px;
+      }
+
+      .service-text h2,
+      .single-service h2,
+      .specialisations-left h2,
       .cta-box h2 {
         font-size: 28px;
+      }
+
+      .specialisations-wrap {
+        padding: 36px 22px;
       }
     }
   </style>
@@ -349,140 +418,110 @@
   </header>
 
   <main class="page-wrap">
-    <section class="hero-block">
-      <div class="eyebrow">Services</div>
+
+    <section class="services-hero">
       <h1>My language services</h1>
       <p>
         Professional English and French to German language services for businesses, digital content and international communication.
-        I help clients communicate clearly, naturally and effectively with German-speaking audiences.
       </p>
     </section>
 
-    <section class="section">
-      <h2>Services</h2>
-      <p class="section-intro">
-        I offer language services tailored to professional communication, online content and texts that need to sound natural, clear and reliable in German.
-      </p>
+    <section class="language-pairs">
+      <div class="pair">English to German</div>
+      <div class="pair">French to German</div>
+      <div class="pair">Proofreading & Editing</div>
+    </section>
 
-      <div class="service-list">
-        <div class="service-item">
-          <h3>Translation</h3>
+    <section class="service-section">
+      <div class="service-two-col">
+        <div class="service-text">
+          <h2>Professional Translation</h2>
           <p>
-            Professional translation from English and French into German. I provide accurate, natural and audience-oriented translations that preserve the meaning, tone and purpose of the original text.
+            Clear, accurate and natural translation from English and French into German. I help businesses and content creators communicate effectively with German-speaking audiences through translations that sound fluent, professional and natural in German.
           </p>
         </div>
 
-        <div class="service-item">
-          <h3>Proofreading & Editing</h3>
-          <p>
-            Revision and refinement of German texts to improve accuracy, clarity and style. This service is ideal for texts that need a final professional polish before publication.
-          </p>
-        </div>
-
-        <div class="service-item">
-          <h3>Subtitling</h3>
-          <p>
-            Creation and translation of subtitles for videos and multimedia content. I help make audiovisual content accessible and easy to follow for German-speaking viewers.
-          </p>
-        </div>
-
-        <div class="service-item">
-          <h3>SEO Translation</h3>
-          <p>
-            Website translations with search visibility in mind. I combine linguistic accuracy with SEO awareness to make your content more effective in the German market.
-          </p>
-        </div>
-
-        <div class="service-item">
-          <h3>Transcreation</h3>
-          <p>
-            Creative adaptation of marketing content for German audiences. The focus is not only on translating words, but on preserving the intended message, tone and impact.
-          </p>
+        <div class="service-image-box">
+          <img src="language-services-wordcloud.jpg" alt="Language services word cloud" />
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Specialisations</h2>
-      <p class="section-intro">
-        My language services are supported by a strong interest in business communication, technical content and digital media.
-      </p>
+    <section class="service-section">
+      <div class="two-col-grid">
 
-      <div class="specialisation-grid">
-        <div class="small-card">
-          <h3>Technical</h3>
+        <div class="single-service">
+          <h2>Subtitling</h2>
           <p>
-            Technical documentation, product-related texts and content that requires precision and clarity.
+            Professional subtitle creation and translation for audiovisual content. I create accurate and well-timed German subtitles that ensure clarity, readability and a natural viewing experience for German-speaking audiences.
           </p>
         </div>
 
-        <div class="small-card">
-          <h3>Business & International Trade</h3>
+        <div class="single-service">
+          <h2>SEO Translation</h2>
           <p>
-            Business communication, company documents and international trade-related content.
+            Website translations optimized for search engines and German readers. I adapt content to the German market while keeping linguistic quality and search visibility in mind.
           </p>
         </div>
 
-        <div class="small-card">
-          <h3>Marketing</h3>
+        <div class="single-service">
+          <h2>Transcreation</h2>
           <p>
-            Marketing copy, promotional material and brand communication adapted to German readers.
+            When a direct translation is not enough, transcreation helps preserve the original message, tone and impact. This is especially useful for marketing content and audience-focused communication.
           </p>
         </div>
 
-        <div class="small-card">
-          <h3>Gaming</h3>
+        <div class="single-service">
+          <h2>Proofreading & Editing</h2>
           <p>
-            Localization and language support for gaming-related and digital entertainment content.
+            Correction and refinement of German texts to improve grammar, clarity, style and overall readability. Ideal for texts that need a professional final polish.
           </p>
         </div>
+
       </div>
     </section>
 
-    <section class="section">
-      <h2>What can I help you with?</h2>
-      <p class="section-intro">
-        Depending on your project, I can support a wide range of text types and digital communication materials.
-      </p>
-
-      <div class="texttype-grid">
-        <div class="small-card">
-          <h3>Websites</h3>
+    <section class="specialisations-wrap">
+      <div class="specialisations">
+        <div class="specialisations-left">
+          <h2>What can I translate for you?</h2>
           <p>
-            Website copy, landing pages and business pages for German-speaking audiences.
+            Here is an overview of the fields and content areas I can support with. My work is focused on communication that needs to be clear, professional and effective in German.
           </p>
         </div>
 
-        <div class="small-card">
-          <h3>Product Descriptions</h3>
-          <p>
-            Clear and persuasive German descriptions for products and services.
-          </p>
-        </div>
+        <div class="specialisation-list">
+          <div class="specialisation-item">
+            <h3>Technical</h3>
+            <p>Technical documentation, product texts and content that requires precision and clarity.</p>
+          </div>
 
-        <div class="small-card">
-          <h3>Business Communication</h3>
-          <p>
-            Emails, presentations, company profiles and other professional business texts.
-          </p>
-        </div>
+          <div class="specialisation-item">
+            <h3>Business & International Trade</h3>
+            <p>Business communication, company documents and trade-related content with an international focus.</p>
+          </div>
 
-        <div class="small-card">
-          <h3>Video Subtitles</h3>
-          <p>
-            Subtitles for promotional videos, interviews, educational content and more.
-          </p>
+          <div class="specialisation-item">
+            <h3>Marketing & Websites</h3>
+            <p>Website copy, promotional material and digital content adapted for German-speaking audiences.</p>
+          </div>
+
+          <div class="specialisation-item">
+            <h3>Gaming</h3>
+            <p>Language support and localization for gaming-related and digital media content.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="cta-box">
-      <h2>Need a quote for your project?</h2>
+      <h2>Get started</h2>
       <p>
-        If you are looking for reliable language services into German, feel free to get in touch. I’d be happy to discuss your project and availability.
+        If you would like to discuss your project or receive a quote for translation, proofreading or subtitling into German, feel free to get in touch.
       </p>
       <a href="index.html#contact" class="cta-link">Get in touch</a>
     </section>
+
   </main>
 
   <footer>
