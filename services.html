@@ -137,10 +137,12 @@
 
     .language-pairs {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 22px;
       padding: 40px 0 24px;
       text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
 
     .pair {
@@ -155,14 +157,10 @@
       padding: 34px 0;
     }
 
-    .service-two-col {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 42px;
-      align-items: start;
+    .single-service {
+      margin-bottom: 44px;
     }
 
-    .service-text h2,
     .single-service h2,
     .specialisations h2,
     .cta-box h2 {
@@ -174,49 +172,28 @@
       color: #111111;
     }
 
-    .service-text p,
     .single-service p,
-    .specialisations p,
+    .specialisations-left p,
     .cta-box p {
       margin: 0;
       font-size: 18px;
       line-height: 1.8;
       color: #4a4f57;
-    }
-
-    .service-image-box {
-      background: #f8fafc;
-      border: 1px solid #e9edf2;
-      border-radius: 24px;
-      padding: 20px;
-    }
-
-    .service-image-box img {
-      width: 100%;
-      display: block;
-      border-radius: 18px;
+      max-width: 860px;
     }
 
     .two-col-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 36px 42px;
-      padding-top: 12px;
-    }
-
-    .single-service {
-      min-height: 100%;
-    }
-
-    .divider-space {
-      height: 18px;
+      padding-top: 10px;
     }
 
     .specialisations-wrap {
       background: #eef1ff;
       border-radius: 30px;
       padding: 50px 36px;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     .specialisations {
@@ -233,10 +210,6 @@
     }
 
     .specialisations-left p {
-      margin: 0;
-      font-size: 18px;
-      line-height: 1.8;
-      color: #4a4f57;
       max-width: 420px;
     }
 
@@ -324,13 +297,8 @@
         justify-content: flex-start;
       }
 
-      .language-pairs,
       .two-col-grid,
       .specialisations {
-        grid-template-columns: 1fr;
-      }
-
-      .service-two-col {
         grid-template-columns: 1fr;
       }
     }
@@ -365,7 +333,6 @@
       }
 
       .services-hero p,
-      .service-text p,
       .single-service p,
       .specialisations-left p,
       .cta-box p {
@@ -376,11 +343,15 @@
         font-size: 24px;
       }
 
-      .service-text h2,
       .single-service h2,
       .specialisations-left h2,
       .cta-box h2 {
         font-size: 28px;
+      }
+
+      .language-pairs {
+        grid-template-columns: 1fr;
+        gap: 10px;
       }
 
       .specialisations-wrap {
@@ -427,27 +398,19 @@
     </section>
 
     <section class="language-pairs">
-      <div class="pair">English to German</div>
-      <div class="pair">French to German</div>
-      <div class="pair">Proofreading & Editing</div>
+      <div class="pair">English → German</div>
+      <div class="pair">French → German</div>
     </section>
 
     <section class="service-section">
-      <div class="service-two-col">
-        <div class="service-text">
-          <h2>Professional Translation</h2>
-          <p>
-            Clear, accurate and natural translation from English and French into German. I help businesses and content creators communicate effectively with German-speaking audiences through translations that sound fluent, professional and natural in German.
-          </p>
-        </div>
 
-        <div class="service-image-box">
-          <img src="language-services-wordcloud.jpg" alt="Language services word cloud" />
-        </div>
+      <div class="single-service">
+        <h2>Professional Translation</h2>
+        <p>
+          Clear, accurate and natural translation from English and French into German. I help businesses and content creators communicate effectively with German-speaking audiences through translations that sound fluent, professional and natural in German.
+        </p>
       </div>
-    </section>
 
-    <section class="service-section">
       <div class="two-col-grid">
 
         <div class="single-service">
