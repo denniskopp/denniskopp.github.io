@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leistungen | Kopp Translations</title>
+  <title>Leistungen – Kopp Translations</title>
 
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -45,6 +49,7 @@
     .brand {
       font-size: 22px;
       font-weight: 600;
+      color: #111111;
       white-space: nowrap;
     }
 
@@ -91,64 +96,176 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .content {
-      max-width: 1240px;
+    .quote-btn:hover {
+      background: #16355f;
+      transform: translateY(-1px);
+    }
+
+    .page-wrap {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 72px 32px 100px;
+      padding: 0 32px 100px;
     }
 
-    .eyebrow {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #506070;
-      margin-bottom: 18px;
+    .services-hero {
+      background: #eef1ff;
+      margin-top: 34px;
+      padding: 72px 30px 60px;
+      text-align: center;
+      border-radius: 30px;
     }
 
-    h1 {
-      margin: 0 0 20px;
-      font-size: 48px;
+    .services-hero h1 {
+      margin: 0 0 16px;
+      font-size: 52px;
       line-height: 1.08;
       font-weight: 600;
       letter-spacing: -0.02em;
+      color: #111111;
     }
 
-    .intro-text {
-      margin: 0 0 30px;
+    .services-hero p {
+      margin: 0 auto;
+      max-width: 760px;
+      font-size: 20px;
+      line-height: 1.7;
+      color: #444c56;
+    }
+
+    .language-pairs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      padding: 40px 0 24px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .pair {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #111111;
+      padding: 10px;
+    }
+
+    .service-section {
+      padding: 34px 0;
+    }
+
+    .single-service {
+      margin-bottom: 44px;
+    }
+
+    .single-service h2,
+    .specialisations h2,
+    .cta-box h2 {
+      margin: 0 0 18px;
+      font-size: 32px;
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #111111;
+    }
+
+    .single-service p,
+    .specialisations-left p,
+    .cta-box p {
+      margin: 0;
       font-size: 18px;
-      line-height: 1.75;
+      line-height: 1.8;
       color: #4a4f57;
       max-width: 860px;
     }
 
-    .services-grid {
+    .two-col-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 30px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px 42px;
+      padding-top: 10px;
     }
 
-    .service-card {
-      background: #f8fafc;
-      border: 1px solid #e9edf2;
-      border-radius: 22px;
-      padding: 28px;
+    .specialisations-wrap {
+      background: #eef1ff;
+      border-radius: 30px;
+      padding: 50px 36px;
+      margin-top: 10px;
     }
 
-    .service-card h3 {
-      margin: 0 0 12px;
-      font-size: 21px;
+    .specialisations {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px 40px;
+      align-items: start;
+    }
+
+    .specialisations-left h2 {
+      margin: 0 0 16px;
+      font-size: 32px;
       color: #111111;
     }
 
-    .service-card p {
+    .specialisations-left p {
+      max-width: 420px;
+    }
+
+    .specialisation-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .specialisation-item {
+      padding: 0 0 14px;
+      border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+    }
+
+    .specialisation-item h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #111111;
+    }
+
+    .specialisation-item p {
       margin: 0;
       font-size: 16px;
-      line-height: 1.65;
+      line-height: 1.7;
       color: #59606a;
+    }
+
+    .cta-box {
+      text-align: center;
+      padding: 70px 20px 20px;
+    }
+
+    .cta-box p {
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 2px solid #0f2747;
+      color: #0f2747;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+    }
+
+    .cta-link:hover {
+      background: #0f2747;
+      color: #ffffff;
     }
 
     footer {
@@ -157,7 +274,11 @@
       font-size: 14px;
       color: #555;
       border-top: 1px solid #e5e5e5;
-      margin-top: 60px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #555;
     }
 
     @media (max-width: 1100px) {
@@ -176,14 +297,15 @@
         justify-content: flex-start;
       }
 
-      .services-grid {
+      .two-col-grid,
+      .specialisations {
         grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 720px) {
       .header-inner,
-      .content {
+      .page-wrap {
         padding-left: 18px;
         padding-right: 18px;
       }
@@ -192,12 +314,48 @@
         font-size: 20px;
       }
 
-      h1 {
-        font-size: 36px;
+      .main-nav a {
+        font-size: 14px;
       }
 
-      .intro-text {
+      .header-right {
+        gap: 22px;
+        flex-wrap: wrap;
+      }
+
+      .services-hero {
+        padding: 52px 20px 42px;
+        border-radius: 24px;
+      }
+
+      .services-hero h1 {
+        font-size: 38px;
+      }
+
+      .services-hero p,
+      .single-service p,
+      .specialisations-left p,
+      .cta-box p {
         font-size: 17px;
+      }
+
+      .pair {
+        font-size: 24px;
+      }
+
+      .single-service h2,
+      .specialisations-left h2,
+      .cta-box h2 {
+        font-size: 28px;
+      }
+
+      .language-pairs {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .specialisations-wrap {
+        padding: 36px 22px;
       }
     }
   </style>
@@ -222,7 +380,7 @@
           <span>|</span>
           <a href="services_de.html">DE</a>
           <span>|</span>
-          <a href="#">FR</a>
+          <a href="services_fr.html">FR</a>
         </div>
 
         <a href="index_de.html#contact" class="quote-btn">Angebot anfragen</a>
@@ -230,36 +388,103 @@
     </div>
   </header>
 
-  <main class="content">
-    <div class="eyebrow">Leistungen</div>
-    <h1>Leistungen</h1>
+  <main class="page-wrap">
 
-    <p class="intro-text">
-      Übersetzungsleistungen für Geschäftskommunikation, digitale Inhalte und Texte, die im Deutschen natürlich, professionell und glaubwürdig wirken sollen.
-    </p>
+    <section class="services-hero">
+      <h1>Meine Sprachdienstleistungen</h1>
+      <p>
+        Professionelle Sprachdienstleistungen aus dem Englischen und Französischen ins Deutsche für Unternehmen, digitale Inhalte und internationale Kommunikation.
+      </p>
+    </section>
 
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Englisch → Deutsch</h3>
+    <section class="language-pairs">
+      <div class="pair">Englisch → Deutsch</div>
+      <div class="pair">Französisch → Deutsch</div>
+    </section>
+
+    <section class="service-section">
+
+      <div class="single-service">
+        <h2>Professionelle Übersetzung</h2>
         <p>
-          Natürliche deutsche Übersetzungen für Websites, Geschäftstexte und Kundenkommunikation.
+          Klare, präzise und natürliche Übersetzungen aus dem Englischen und Französischen ins Deutsche. Ich unterstütze Unternehmen und Content-Ersteller dabei, deutschsprachige Zielgruppen mit Texten zu erreichen, die flüssig, professionell und natürlich klingen.
         </p>
       </div>
 
-      <div class="service-card">
-        <h3>Französisch → Deutsch</h3>
-        <p>
-          Präzise und flüssige deutsche Übersetzungen aus dem Französischen mit besonderem Augenmerk auf Kontext und Bedeutung.
-        </p>
-      </div>
+      <div class="two-col-grid">
 
-      <div class="service-card">
-        <h3>Marketing &amp; Webinhalte</h3>
-        <p>
-          Natürliche deutsche Texte für Websites und Online-Inhalte – klar, glaubwürdig und gut lesbar.
-        </p>
+        <div class="single-service">
+          <h2>Untertitelung</h2>
+          <p>
+            Professionelle Erstellung und Übersetzung von Untertiteln für audiovisuelle Inhalte. Ich erstelle präzise und gut abgestimmte deutsche Untertitel, die für Klarheit, Lesbarkeit und ein natürliches Seherlebnis bei deutschsprachigen Zielgruppen sorgen.
+          </p>
+        </div>
+
+        <div class="single-service">
+          <h2>SEO-Übersetzung</h2>
+          <p>
+            Website-Übersetzungen, die für Suchmaschinen und deutsche Leser optimiert sind. Ich passe Inhalte an den deutschen Markt an und behalte dabei sowohl sprachliche Qualität als auch Sichtbarkeit im Blick.
+          </p>
+        </div>
+
+        <div class="single-service">
+          <h2>Transkreation</h2>
+          <p>
+            Wenn eine direkte Übersetzung nicht ausreicht, hilft Transkreation dabei, die ursprüngliche Aussage, den Ton und die Wirkung zu bewahren. Besonders sinnvoll ist das für Marketingtexte und zielgruppenorientierte Kommunikation.
+          </p>
+        </div>
+
+        <div class="single-service">
+          <h2>Korrektorat & Lektorat</h2>
+          <p>
+            Korrektur und sprachliche Überarbeitung deutscher Texte, um Grammatik, Klarheit, Stil und allgemeine Lesbarkeit zu verbessern. Ideal für Texte, die den letzten professionellen Feinschliff benötigen.
+          </p>
+        </div>
+
       </div>
-    </div>
+    </section>
+
+    <section class="specialisations-wrap">
+      <div class="specialisations">
+        <div class="specialisations-left">
+          <h2>Was kann ich für Sie übersetzen?</h2>
+          <p>
+            Hier finden Sie einen Überblick über die Fachgebiete und Inhaltsbereiche, bei denen ich Sie unterstützen kann. Mein Fokus liegt auf Kommunikation, die im Deutschen klar, professionell und wirkungsvoll sein soll.
+          </p>
+        </div>
+
+        <div class="specialisation-list">
+          <div class="specialisation-item">
+            <h3>Technik</h3>
+            <p>Technische Dokumentation, Produkttexte und Inhalte, bei denen Präzision und Klarheit entscheidend sind.</p>
+          </div>
+
+          <div class="specialisation-item">
+            <h3>Wirtschaft & Internationaler Handel</h3>
+            <p>Geschäftskommunikation, Unternehmensdokumente und handelsbezogene Inhalte mit internationalem Fokus.</p>
+          </div>
+
+          <div class="specialisation-item">
+            <h3>Marketing & Websites</h3>
+            <p>Website-Texte, Werbematerialien und digitale Inhalte, angepasst an deutschsprachige Zielgruppen.</p>
+          </div>
+
+          <div class="specialisation-item">
+            <h3>Gaming</h3>
+            <p>Sprachliche Unterstützung und Lokalisierung für gamingbezogene und digitale Medieninhalte.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-box">
+      <h2>Jetzt starten</h2>
+      <p>
+        Wenn Sie Ihr Projekt besprechen oder ein Angebot für Übersetzung, Lektorat oder Untertitelung ins Deutsche erhalten möchten, freue ich mich über Ihre Nachricht.
+      </p>
+      <a href="index_de.html#contact" class="cta-link">Kontakt aufnehmen</a>
+    </section>
+
   </main>
 
   <footer>
