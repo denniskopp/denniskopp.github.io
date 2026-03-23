@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>À propos | Kopp Translations</title>
+  <title>À propos – Kopp Translations</title>
 
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -45,6 +49,7 @@
     .brand {
       font-size: 22px;
       font-weight: 600;
+      color: #111111;
       white-space: nowrap;
     }
 
@@ -91,16 +96,22 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .content {
+    .quote-btn:hover {
+      background: #16355f;
+      transform: translateY(-1px);
+    }
+
+    .page-wrap {
       max-width: 1240px;
       margin: 0 auto;
-      padding: 72px 32px 100px;
+      padding: 48px 32px 100px;
     }
 
-    .page {
-      max-width: 860px;
+    .page-intro {
+      margin-bottom: 44px;
     }
 
     .eyebrow {
@@ -109,22 +120,76 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #506070;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
-    h1 {
-      margin: 0 0 28px;
-      font-size: 48px;
-      line-height: 1.08;
+    .page-intro h1 {
+      margin: 0;
+      font-size: 52px;
+      line-height: 1.06;
       font-weight: 600;
       letter-spacing: -0.02em;
+      color: #111111;
     }
 
-    p {
-      margin: 0 0 24px;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 56px;
+      align-items: start;
+      margin-bottom: 72px;
+    }
+
+    .about-photo {
+      background: #f8fafc;
+      border: 1px solid #e9edf2;
+      border-radius: 24px;
+      padding: 18px;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .about-text p {
+      margin: 0 0 22px;
       font-size: 18px;
-      line-height: 1.75;
+      line-height: 1.8;
       color: #4a4f57;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .info-card {
+      background: #f8fafc;
+      border: 1px solid #e9edf2;
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .info-card h3 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      color: #111111;
+    }
+
+    .info-card p,
+    .info-card li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #59606a;
+    }
+
+    .info-card ul {
+      margin: 0;
+      padding-left: 18px;
     }
 
     footer {
@@ -133,7 +198,65 @@
       font-size: 14px;
       color: #555;
       border-top: 1px solid #e5e5e5;
-      margin-top: 60px;
+      margin-top: 80px;
+    }
+
+    footer a {
+      color: #555;
+    }
+
+    @media (max-width: 1100px) {
+      .header-inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .main-nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 18px 26px;
+      }
+
+      .header-right {
+        justify-content: flex-start;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .header-inner,
+      .page-wrap {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .main-nav a {
+        font-size: 14px;
+      }
+
+      .header-right {
+        gap: 22px;
+        flex-wrap: wrap;
+      }
+
+      .page-intro h1 {
+        font-size: 38px;
+      }
+
+      .about-text p {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
@@ -165,33 +288,70 @@
     </div>
   </header>
 
-  <main class="content">
-    <section class="page">
+  <main class="page-wrap">
+    <section class="page-intro">
       <div class="eyebrow">À propos</div>
-      <h1>À propos</h1>
+      <h1>Bonjour, je m'appelle Dennis.</h1>
+      <p style="font-size:20px; color:#555;">
+Traducteur freelance | Anglais & Français → Allemand
+</p>
+    </section>
 
-      <p>
-        Je suis traducteur freelance basé à Essen, en Allemagne, spécialisé dans la traduction de l’anglais et du français vers l’allemand.
-      </p>
+    <section class="about-grid">
+      <div class="about-photo">
+        <img src="dennis-kopp.jpg" alt="Dennis Kopp" />
+      </div>
 
-      <p>
-        Mon objectif est d’aider les entreprises à communiquer de manière claire, naturelle et professionnelle auprès d’un public germanophone.
-      </p>
+      <div class="about-text">
+        <p>
+          Je suis traducteur freelance basé à Essen, en Allemagne, spécialisé dans la traduction de l’anglais et du français vers l’allemand.
+          Mon objectif est d’aider les entreprises à communiquer clairement et naturellement avec un public germanophone grâce à des traductions précises et soignées.
+        </p>
 
-      <p>
-        Mon parcours professionnel associe compétences linguistiques et expérience du commerce international. Grâce à ma formation et à mon expérience pratique dans un contexte international, j’ai développé une bonne compréhension de la communication commerciale interculturelle.
-      </p>
+        <p>
+          Mon parcours professionnel associe compétences linguistiques et expérience du commerce international. J’ai suivi une formation de trois ans en tant qu’assistant en langues étrangères diplômé d’État, puis un apprentissage de trois ans en gestion du commerce international. Pendant cette période, j’ai régulièrement communiqué avec des clients anglophones et francophones, ce qui m’a permis de développer une solide compréhension de la communication commerciale internationale.
+        </p>
 
-      <p>
-        J’accorde une grande importance à des textes allemands précis, fiables et agréables à lire, qui restituent clairement et naturellement le sens du texte d’origine.
-      </p>
+        <p>
+          Les langues et les cultures m’ont toujours fasciné. J’aime voyager, passer du temps dans la nature et découvrir de nouvelles perspectives à travers la langue. Pendant mon temps libre, je suis le football et j’aime les jeux vidéo.
+        </p>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <div class="info-card">
+        <h3>Fonction</h3>
+        <p>Traducteur freelance<br>Anglais & Français → Allemand</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Langues</h3>
+        <ul>
+          <li>Allemand – Langue maternelle</li>
+          <li>Anglais – Professionnel</li>
+          <li>Français – Professionnel</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Formation</h3>
+        <ul>
+          <li>Assistant en langues étrangères diplômé d’État</li>
+          <li>Formation en gestion du commerce international</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Localisation</h3>
+        <p>Essen, Allemagne</p>
+      </div>
     </section>
   </main>
 
   <footer>
     Copyright © 2026 | Dennis Kopp | All Rights Reserved
     <br><br>
-    <a href="impressum.html">Impressum</a> | <a href="privacy.html">Datenschutz</a>
+    <a href="impressum.html">Imprint</a> | <a href="privacy.html">Privacy</a>
   </footer>
 
 </body>
