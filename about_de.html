@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Über mich | Kopp Translations</title>
+  <title>Über mich – Kopp Translations</title>
 
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -45,6 +49,7 @@
     .brand {
       font-size: 22px;
       font-weight: 600;
+      color: #111111;
       white-space: nowrap;
     }
 
@@ -91,16 +96,22 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .content {
+    .quote-btn:hover {
+      background: #16355f;
+      transform: translateY(-1px);
+    }
+
+    .page-wrap {
       max-width: 1240px;
       margin: 0 auto;
-      padding: 72px 32px 100px;
+      padding: 48px 32px 100px;
     }
 
-    .page {
-      max-width: 860px;
+    .page-intro {
+      margin-bottom: 44px;
     }
 
     .eyebrow {
@@ -109,22 +120,76 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #506070;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
-    h1 {
-      margin: 0 0 28px;
-      font-size: 48px;
-      line-height: 1.08;
+    .page-intro h1 {
+      margin: 0;
+      font-size: 52px;
+      line-height: 1.06;
       font-weight: 600;
       letter-spacing: -0.02em;
+      color: #111111;
     }
 
-    p {
-      margin: 0 0 24px;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 56px;
+      align-items: start;
+      margin-bottom: 72px;
+    }
+
+    .about-photo {
+      background: #f8fafc;
+      border: 1px solid #e9edf2;
+      border-radius: 24px;
+      padding: 18px;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+    }
+
+    .about-text p {
+      margin: 0 0 22px;
       font-size: 18px;
-      line-height: 1.75;
+      line-height: 1.8;
       color: #4a4f57;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .info-card {
+      background: #f8fafc;
+      border: 1px solid #e9edf2;
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .info-card h3 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      color: #111111;
+    }
+
+    .info-card p,
+    .info-card li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #59606a;
+    }
+
+    .info-card ul {
+      margin: 0;
+      padding-left: 18px;
     }
 
     footer {
@@ -133,7 +198,11 @@
       font-size: 14px;
       color: #555;
       border-top: 1px solid #e5e5e5;
-      margin-top: 60px;
+      margin-top: 80px;
+    }
+
+    footer a {
+      color: #555;
     }
 
     @media (max-width: 1100px) {
@@ -151,11 +220,19 @@
       .header-right {
         justify-content: flex-start;
       }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 720px) {
       .header-inner,
-      .content {
+      .page-wrap {
         padding-left: 18px;
         padding-right: 18px;
       }
@@ -168,11 +245,16 @@
         font-size: 14px;
       }
 
-      h1 {
-        font-size: 36px;
+      .header-right {
+        gap: 22px;
+        flex-wrap: wrap;
       }
 
-      p {
+      .page-intro h1 {
+        font-size: 38px;
+      }
+
+      .about-text p {
         font-size: 17px;
       }
     }
@@ -198,7 +280,7 @@
           <span>|</span>
           <a href="about_de.html">DE</a>
           <span>|</span>
-          <a href="#">FR</a>
+          <a href="about_fr.html">FR</a>
         </div>
 
         <a href="index_de.html#contact" class="quote-btn">Angebot anfragen</a>
@@ -206,26 +288,63 @@
     </div>
   </header>
 
-  <main class="content">
-    <section class="page">
+  <main class="page-wrap">
+    <section class="page-intro">
       <div class="eyebrow">Über mich</div>
-      <h1>Über mich</h1>
+      <h1>Hallo, ich bin Dennis.</h1>
+      <p style="font-size:20px; color:#555;">
+Freiberuflicher Übersetzer | Englisch & Französisch → Deutsch
+</p>
+    </section>
 
-      <p>
-        Ich bin freiberuflicher Übersetzer mit Sitz in Essen und habe mich auf Übersetzungen aus dem Englischen und Französischen ins Deutsche spezialisiert.
-      </p>
+    <section class="about-grid">
+      <div class="about-photo">
+        <img src="dennis-kopp.jpg" alt="Dennis Kopp" />
+      </div>
 
-      <p>
-        Mein Ziel ist es, Unternehmen dabei zu helfen, ihre Inhalte klar, natürlich und professionell für deutschsprachige Zielgruppen zu kommunizieren.
-      </p>
+      <div class="about-text">
+        <p>
+          Ich bin freiberuflicher Übersetzer mit Sitz in Essen und habe mich auf Übersetzungen aus dem Englischen und Französischen ins Deutsche spezialisiert.
+          Mein Ziel ist es, Unternehmen dabei zu helfen, mit deutschsprachigen Zielgruppen klar und natürlich zu kommunizieren – durch präzise und sorgfältig ausgearbeitete Übersetzungen.
+        </p>
 
-      <p>
-        Mein beruflicher Hintergrund verbindet sprachliche Kompetenz mit internationaler Handelserfahrung. Durch meine Ausbildung und praktische Arbeit im internationalen Umfeld habe ich ein gutes Verständnis für grenzüberschreitende Geschäftskommunikation entwickelt.
-      </p>
+        <p>
+          Mein beruflicher Hintergrund verbindet sprachliche Kompetenz mit internationaler Geschäftserfahrung. Ich habe zunächst eine dreijährige Ausbildung zum staatlich geprüften Fremdsprachenassistenten absolviert und anschließend eine dreijährige Ausbildung im internationalen Handelsmanagement abgeschlossen. In dieser Zeit stand ich regelmäßig mit englisch- und französischsprachigen Kunden in Kontakt und entwickelte ein fundiertes Verständnis für internationale Geschäftskommunikation.
+        </p>
 
-      <p>
-        Ich lege Wert auf präzise, zuverlässige und gut lesbare deutsche Texte, die die Aussage des Originals klar und natürlich wiedergeben.
-      </p>
+        <p>
+          Sprachen und Kulturen haben mich schon immer fasziniert. Ich reise gerne, verbringe Zeit in der Natur und entdecke durch Sprache neue Perspektiven. In meiner Freizeit interessiere ich mich für Fußball und Videospiele.
+        </p>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <div class="info-card">
+        <h3>Berufsbezeichnung</h3>
+        <p>Freiberuflicher Übersetzer<br>Englisch & Französisch → Deutsch</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Sprachen</h3>
+        <ul>
+          <li>Deutsch – Muttersprache</li>
+          <li>Englisch – Professionell</li>
+          <li>Französisch – Professionell</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Ausbildung</h3>
+        <ul>
+          <li>Staatlich geprüfter Fremdsprachenassistent</li>
+          <li>Ausbildung im internationalen Handelsmanagement</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Standort</h3>
+        <p>Essen, Deutschland</p>
+      </div>
     </section>
   </main>
 
