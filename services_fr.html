@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Kopp Translations</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #111111;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e9ecef;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 34px;
+    }
+
+    .main-nav a {
+      font-size: 15px;
+      color: #1a1a1a;
+      transition: opacity 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      opacity: 0.65;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      white-space: nowrap;
+    }
+
+    .languages {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #1a1a1a;
+    }
+
+    .quote-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: #0f2747;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .content {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 72px 32px 100px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #506070;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 48px;
+      line-height: 1.08;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .intro-text {
+      margin: 0 0 30px;
+      font-size: 18px;
+      line-height: 1.75;
+      color: #4a4f57;
+      max-width: 860px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .service-card {
+      background: #f8fafc;
+      border: 1px solid #e9edf2;
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 12px;
+      font-size: 21px;
+      color: #111111;
+    }
+
+    .service-card p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.65;
+      color: #59606a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #e5e5e5;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index_fr.html" class="brand">Kopp Translations</a>
+
+      <nav class="main-nav">
+        <a href="index_fr.html">Accueil</a>
+        <a href="about_fr.html">À propos</a>
+        <a href="services_fr.html">Services</a>
+        <a href="faq_fr.html">FAQ</a>
+        <a href="index_fr.html#contact">Contact</a>
+      </nav>
+
+      <div class="header-right">
+        <div class="languages">
+          <a href="services.html">EN</a>
+          <span>|</span>
+          <a href="services_de.html">DE</a>
+          <span>|</span>
+          <a href="services_fr.html">FR</a>
+        </div>
+
+        <a href="index_fr.html#contact" class="quote-btn">Demander un devis</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="eyebrow">Services</div>
+    <h1>Services</h1>
+
+    <p class="intro-text">
+      Des services de traduction adaptés à la communication professionnelle, aux contenus numériques et aux textes qui doivent paraître naturels, professionnels et fiables en allemand.
+    </p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Anglais → Allemand</h3>
+        <p>
+          Des traductions naturelles en allemand pour les sites web, les textes professionnels et la communication avec les clients.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Français → Allemand</h3>
+        <p>
+          Des traductions allemandes précises et fluides à partir du français, avec une attention particulière au contexte et au sens.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Marketing &amp; Contenu web</h3>
+        <p>
+          Des textes allemands naturels pour les sites web et les contenus en ligne – clairs, crédibles et faciles à lire.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Copyright © 2026 | Dennis Kopp | All Rights Reserved
+    <br><br>
+    <a href="impressum.html">Impressum</a> | <a href="privacy.html">Datenschutz</a>
+  </footer>
+
+</body>
+</html>
