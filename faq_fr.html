@@ -45,6 +45,7 @@
     .brand {
       font-size: 22px;
       font-weight: 600;
+      color: #111111;
       white-space: nowrap;
     }
 
@@ -79,6 +80,10 @@
       color: #1a1a1a;
     }
 
+    .languages a:hover {
+      opacity: 0.65;
+    }
+
     .quote-btn {
       display: inline-flex;
       align-items: center;
@@ -91,6 +96,12 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .quote-btn:hover {
+      background: #16355f;
+      transform: translateY(-1px);
     }
 
     .content {
@@ -99,11 +110,16 @@
       padding: 72px 32px 100px;
     }
 
-    h1 {
-      margin: 0 0 28px;
-      font-size: 48px;
-      line-height: 1.08;
+    .section {
+      padding-top: 32px;
+      margin-bottom: 88px;
+    }
+
+    .section h1 {
+      margin: 0 0 20px;
+      font-size: 42px;
       font-weight: 600;
+      color: #111111;
       letter-spacing: -0.02em;
     }
 
@@ -135,13 +151,50 @@
       max-width: 860px;
     }
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 14px;
-      color: #555;
-      border-top: 1px solid #e5e5e5;
-      margin-top: 60px;
+    @media (max-width: 1100px) {
+      .header-inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .main-nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 18px 26px;
+      }
+
+      .header-right {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .header-inner,
+      .content {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .main-nav a {
+        font-size: 14px;
+      }
+
+      .header-right {
+        gap: 22px;
+        flex-wrap: wrap;
+      }
+
+      .section h1 {
+        font-size: 34px;
+      }
+
+      .faq-item p {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
@@ -174,50 +227,52 @@
   </header>
 
   <main class="content">
-    <h1>FAQ</h1>
+    <section class="section">
+      <h1>FAQ</h1>
 
-    <div class="faq-box">
-      <div class="faq-item">
-        <h3>Comment les tarifs de traduction sont-ils calculés ?</h3>
-        <p>
-          Les tarifs peuvent être calculés au mot, à la page ou sous forme de prix fixe pour l’ensemble du projet, en fonction de la longueur, du domaine et de la complexité du texte. Vous recevez toujours un devis clair à l’avance.
-        </p>
-      </div>
+      <div class="faq-box">
+        <div class="faq-item">
+          <h3>Comment les tarifs de traduction sont-ils calculés ?</h3>
+          <p>
+            Les tarifs peuvent être calculés au mot, à la page ou sous forme de prix fixe pour l’ensemble du projet, selon la longueur, le domaine et la complexité du texte. Vous recevez toujours un devis clair à l’avance.
+          </p>
+        </div>
 
-      <div class="faq-item">
-        <h3>Comment fonctionne le paiement ?</h3>
-        <p>
-          Le paiement s’effectue généralement après la livraison sur facture. Pour les projets plus importants ou les nouveaux clients, un acompte peut être demandé.
-        </p>
-      </div>
+        <div class="faq-item">
+          <h3>Comment fonctionne le paiement ?</h3>
+          <p>
+            Le paiement s’effectue généralement après la livraison sur facture. Pour les projets plus importants ou les nouveaux clients, un acompte peut être demandé.
+          </p>
+        </div>
 
-      <div class="faq-item">
-        <h3>Quels moyens de paiement acceptez-vous ?</h3>
-        <p>
-          Les informations de paiement sont indiquées dans votre devis. Le virement bancaire est le mode de paiement standard.
-        </p>
-      </div>
+        <div class="faq-item">
+          <h3>Quels moyens de paiement acceptez-vous ?</h3>
+          <p>
+            Les informations de paiement sont indiquées dans votre devis. Le virement bancaire est le mode de paiement standard.
+          </p>
+        </div>
 
-      <div class="faq-item">
-        <h3>Que se passe-t-il si l’étendue du projet change ?</h3>
-        <p>
-          Toute modification est discutée en toute transparence et ajustée en conséquence.
-        </p>
-      </div>
+        <div class="faq-item">
+          <h3>Que se passe-t-il si l’étendue du projet change ?</h3>
+          <p>
+            Toute modification est discutée en toute transparence et ajustée en conséquence.
+          </p>
+        </div>
 
-      <div class="faq-item">
-        <h3>Comment la TVA est-elle traitée ?</h3>
-        <p>
-          En tant que petite entreprise au sens du § 19 de la loi allemande sur la TVA (UStG), aucune TVA n’est facturée. Toutes les factures sont émises sans TVA conformément à la réglementation fiscale allemande.
-        </p>
+        <div class="faq-item">
+          <h3>Comment la TVA est-elle traitée ?</h3>
+          <p>
+            En tant que petite entreprise au sens du § 19 de la loi allemande sur la TVA (UStG), aucune TVA n’est facturée. Toutes les factures sont émises sans TVA conformément à la réglementation fiscale allemande.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
-  <footer>
+  <footer style="text-align:center; padding:40px 20px; font-size:14px; color:#555; border-top:1px solid #e5e5e5; margin-top:60px;">
     Copyright © 2026 | Dennis Kopp | All Rights Reserved
     <br><br>
-    <a href="impressum.html">Impressum</a> | <a href="privacy.html">Datenschutz</a>
+    <a href="impressum.html">Imprint</a> | <a href="privacy.html">Privacy</a>
   </footer>
 
 </body>
